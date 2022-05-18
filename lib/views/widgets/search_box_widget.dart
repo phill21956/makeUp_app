@@ -30,8 +30,7 @@ class SearchBoxWidget extends StatelessWidget {
               leading: SizedBox(
                 width: 50,
                 child: Image.network(user.imageLink),
-                // child: CircleAvatar( backgroundImage: NetworkImage(user.imageLink))
-              ),
+                             ),
               title: Text(
                 user.name,
                 maxLines: 1,
@@ -69,45 +68,4 @@ class SearchBoxWidget extends StatelessWidget {
     );
   }
 }
-
-
-
-// SizedBox(
-//       height: 50,
-//       // width: 100,
-//       child: TextField(
-//         //onChanged: onChange,
-//         keyboardType: TextInputType.text,
-//         decoration: InputDecoration(
-//             // fillColor: Colors.grey,
-//             prefixIcon: const Icon(
-//               Icons.search_outlined,
-//               color: Colors.black,
-//               size: 28,
-//             ),
-//             enabledBorder: OutlineInputBorder(
-//               borderSide: BorderSide(
-//                 color: Colors.black.withOpacity(0.1),
-//                 width: 1,
-//               ),
-//               borderRadius: const BorderRadius.all(Radius.circular(7.0)),
-//             ),
-//             focusedBorder: OutlineInputBorder(
-//               borderSide: BorderSide(
-//                 color: Colors.grey.withOpacity(0.5),
-//                 width: 1,
-//               ),
-//               borderRadius: const BorderRadius.all(Radius.circular(7.0)),
-//             ),
-//             contentPadding: const EdgeInsets.symmetric(horizontal: 20),
-//             hintText: 'Search for products',
-//             filled: true,
-//             hintStyle: const TextStyle(
-//               fontSize: 16,
-//               fontWeight: FontWeight.w400,
-//               color: Colors.black,
-//             )),
-//       ),
-//     );
-
 

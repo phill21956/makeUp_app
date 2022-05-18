@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:makeup_shop_app/models/product_model.dart';
 
 class ProductDetails extends StatelessWidget {
   const ProductDetails(
@@ -7,10 +8,14 @@ class ProductDetails extends StatelessWidget {
       required this.brand,
       required this.description,
       required this.name,
+      this.id,
       required this.price,
+      this.products,
       Key? key})
       : super(key: key);
   final String title, imageLink, name, brand, price, description;
+  final int? id;
+  final ProductModel? products;
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -23,7 +28,6 @@ class ProductDetails extends StatelessWidget {
             Container(
               width: double.infinity,
               height: MediaQuery.of(context).size.height / 3,
-              // height: 250,
               decoration: BoxDecoration(
                   color: Colors.white,
                   borderRadius: BorderRadius.circular(5),
@@ -38,7 +42,6 @@ class ProductDetails extends StatelessWidget {
                   style: const TextStyle(
                       fontSize: 18,
                       fontWeight: FontWeight.w700,
-                      // color: Colors.white,
                       decoration: TextDecoration.none)),
             ),
             const SizedBox(height: 20),
